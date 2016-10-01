@@ -7,50 +7,38 @@
 /**
  * MakeHashTags
  */
-class MakeHashTagsLinks {
-    // Where we will be search hashtags
-    searchArea: HTMLElement;
-    // Content what area have
-    searchAreaTextToArr: string[];
-    // Url what we well add to hashtags
-    addedUrlToHashtag: string;
-
+var MakeHashTagsLinks = (function () {
     /*
     * @searchArea: write id element. If you hafe <div id="content", write, to searchArea, content.
     * @baseUrl: write full url, with http://.
     */
-    constructor(searchArea:string, baseUrl:string) {
+    function MakeHashTagsLinks(searchArea, baseUrl) {
         this.addedUrlToHashtag = baseUrl || location.hostname;
         this.searchArea = document.getElementById(searchArea);
         this.searchAreaTextToArr = document.getElementById(searchArea).innerHTML.split(' ');
     }
-
-    letsMakeHashTags():any {
-        let readyString: string = this.searchHashTags();
+    MakeHashTagsLinks.prototype.letsMakeHashTags = function () {
+        var readyString = this.searchHashTags();
         this.searchArea.innerHTML = readyString;
-    }
-
-    private searchHashTags():string {
-        for (let i = 0; i < this.searchAreaTextToArr.length; i++) {
-            let selectedWord:string = this.searchAreaTextToArr[i];
-
+    };
+    MakeHashTagsLinks.prototype.searchHashTags = function () {
+        for (var i = 0; i < this.searchAreaTextToArr.length; i++) {
+            var selectedWord = this.searchAreaTextToArr[i];
             if (selectedWord.search('#') === 0) {
                 this.searchAreaTextToArr[i] = this.addAttributes(selectedWord);
             }
         }
         return this.searchAreaTextToArr.join(' ');
-    }
-
-    private addAttributes(hashTag: any):string {
-        let href:string = this.addedUrlToHashtag + "" + hashTag;
-        let hashtagToLink:string = hashTag.link(href);
-
+    };
+    MakeHashTagsLinks.prototype.addAttributes = function (hashTag) {
+        var href = this.addedUrlToHashtag + "" + hashTag;
+        var hashtagToLink = hashTag.link(href);
         //let link: HTMLElement = document.createElement('a');
         //link.href = this.addedUrlToHashtag + "" + hashTag;
         //link.innerHTML = hashTag;
         //link.title = link.text;
-
         return hashtagToLink;
-    }
-
-}
+    };
+    return MakeHashTagsLinks;
+}());
+//# sourceMappingURL=app.js.map
