@@ -7,10 +7,11 @@
 /**
  * MakeHashTags
  */
+
 class MakeHashTagsLinks {
     /*
     * @searchArea: write id element. If you hafe <div id="content", write, to searchArea, content.
-    * @baseUrl: write full url, with http://.
+    * @baseUrl: write full url, with http://example.com/
     */
     constructor(searchArea, baseUrl) {
         this.addedUrlToHashtag = baseUrl || location.hostname;
@@ -40,4 +41,9 @@ class MakeHashTagsLinks {
         return hashtagToLink;
     }
 }
+
+window.onload = (function() {
+    let letsMakeHashTagsLinks = new MakeHashTagsLinks('test', 'http://google.com/');
+    letsMakeHashTagsLinks.letsMakeHashTags();
+})();
 //# sourceMappingURL=app.js.map
