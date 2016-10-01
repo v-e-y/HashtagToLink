@@ -4,10 +4,6 @@
 * Exemple, we have: Lorem #ipsum some string.
 * after script work we will have Lorem <a href="http://example.com/#ipsum" title="ipsum">#ipsum</a> some string.
 */
-/**
- * MakeHashTags
- */
-
 class MakeHashTagsLinks {
     /*
     * @searchArea: write id element. If you hafe <div id="content", write, to searchArea, content.

@@ -4,9 +4,6 @@
 * Exemple, we have: Lorem #ipsum some string.
 * after script work we will have Lorem <a href="http://example.com/#ipsum" title="ipsum">#ipsum</a> some string.
 */
-/**
- * MakeHashTags
- */
 class MakeHashTagsLinks {
     // Where we will be search hashtags
     searchArea: HTMLElement;
