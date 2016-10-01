@@ -9,3 +9,7 @@ Make hashtag a hyperlink.
 ### After
 
 > Lorem <a href="http://example.com/#ipsum">#ipsum</a> dolor sit amet, consectetur <a href="http://example.com/#adipiscing">#adipiscing</a> elit.
+
+```
+Lorem <a href="http://example.com/#ipsum">#ipsum</a> dolor sit amet, consectetur <a href="http://example.com/#adipiscing">#adipiscing</a> elit.
+```
