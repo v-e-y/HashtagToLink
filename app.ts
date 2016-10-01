@@ -10,6 +10,7 @@
 class MakeHashTagsLinks {
     // Where we will be search hashtags
     searchArea: HTMLElement;
+    // Content what area have
     searchAreaTextToArr: string[];
     // Url what we well add to hashtags
     addedUrlToHashtag: string;
