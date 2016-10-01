@@ -15,6 +15,10 @@ class MakeHashTagsLinks {
     // Url what we well add to hashtags
     addedUrlToHashtag: string;
 
+    /*
+    * @searchArea: write id element. If you hafe <div id="content", write, to searchArea, content.
+    * @baseUrl: write full url, with http://.
+    */
     constructor(searchArea:string, baseUrl:string) {
         this.addedUrlToHashtag = baseUrl || location.hostname;
         this.searchArea = document.getElementById(searchArea);
