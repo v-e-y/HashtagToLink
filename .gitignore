@@ -5,8 +5,7 @@
 
 ### VisualStudioCode ###
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-
-!tsconfig.json
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+tsconfig.json
