@@ -44,12 +44,10 @@ class MakeHashTagsLinks {
     private addAttributes(hashTag: any):string {
         let href:string = this.addedUrlToHashtag + "" + hashTag;
         let hashtagToLink:string = hashTag.link(href);
-
         //let link: HTMLElement = document.createElement('a');
         //link.href = this.addedUrlToHashtag + "" + hashTag;
         //link.innerHTML = hashTag;
         //link.title = link.text;
-
         return hashtagToLink;
     }
 
