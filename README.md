@@ -1,4 +1,4 @@
-# HashtagToLink
+# Hashtag to link
 Make hashtag a hyperlink.
 
 
